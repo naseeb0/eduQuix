@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+<link rel="stylesheet" href="assets/css/quiz.css">
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#" style="background-image: url(&quot;assets/img/eduQuix.png&quot;);"></a><img src="assets/img/eduQuix.png" style="height: 75px;width: 75px;"><a class="navbar-brand logo" href="#">eduQuix</a><button data-toggle="collapse"
+                class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="zoom.html">Zoom</a></li>
+		    <li class="nav-item" role="presentation"><a class="nav-link" href="quiz.html">Quiz</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="assignment.html">Assignment</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="https://hkhrapps.wixsite.com/mysite-1">School Supplies</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page landing-page">
+        <section class="clean-block clean-hero" style="background-image: url(&quot;assets/img/School.jpg&quot;);color: rgba(9, 162, 255, 0.85);">
+            <div class="text">
+                <h2>A all-in-one website for video meetings, submission and marking of assignments, and many more!</h2>
+                <p>For students, By students.</p><button class="btn btn-outline-light btn-lg" type="button">Learn More</button></div>
+        </section>
+        <section class="clean-block clean-info dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">What is this website?</h2>
+                    <p>This website is built for both students and teachers alike. There are many features to facilitate learning even during lockdown. Scroll down to see what features we have!</p>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="getting-started-info"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="clean-block features">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Features</h2>
+                    <p></p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-5 feature-box"><i class="material-icons icon" style="background-image: url(&quot;assets/img/download.png&quot;);">computer</i>
+                        <h4>Zoom Meetings</h4>
+                        <p>Is it hard to navigate to the Zoom app or you don't have the Zoom app installed? Fret not, with the Zoom app embeded in this website, you can join meetings hassle-free!</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><i class="icon-pencil icon"></i>
+                        <h4>School Supplies Delivery</h4>
+                        <p>Lacking school supplies but can't go out with so many restrictions? We have a marketplace for you to buy all your school essentials! And don't worry about collection, they will be delivered to your house in no time!</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><i class="icon-book-open icon"></i>
+                        <h4>Assignments Submission and Marking</h4>
+                        <p>Google Classroom, Edmodo, Blackboard Learn...you name it! So many different places to submit and mark assignments. But with this website, all you need is a camera to scan your work or a text editor to type out your assignment,
+                            and viola!</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><i class="icon-plus icon"></i>
+                        <h4>More Features Coming Your Way</h4>
+                        <p>With this Beta release, we have so many more features we want to integrate! With your patience, you will see them soon!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="clean-block about-us">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Meet the Creators</h2>
+                    <p>We are Team NaKeSmo, a team of three students passionate in helping school children and teachers during this period of Covid-19.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar1.jpg">
+                            <div class="card-body info">
+                                <h4 class="card-title">Keshav Majithia</h4>
+                                <p class="card-text">Keshav Majithia is a High School senior from Punjab, India, who knows basics of Python, C, JavaScript, Java and loves to build android apps using Kodular. He worked on delivery part by designing and programming the website and is currently 17 years old.</p>
+                                <div class="icons"><a href="https://www.facebook.com/keshav.majithia"><i class="icon-social-facebook"></i></a><a href="https://www.instagram.com/keshav_majithia_km_lit/"><i class="icon-social-instagram"></i></a><a href="https://twitter.com/Mulish_Maverick"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar2.webp">
+                            <div class="card-body info">
+                                <h4 class="card-title">Naseeb Dangi</h4>
+                                <p class="card-text">Naseeb Dangi is Sophomore at Madan Bhdanri Memorial College. He Loves programming in Python and is an electronic hobbiyst who tries making new things.</p>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar3.png">
+                            <div class="card-body info">
+                                <h4 class="card-title">Callie Tan</h4>
+                                <p class="card-text">She is a Grade 8 coding enthusiast who loves using technology to help those around her, from making a telegram bot to cheer her friends up every day, to building a dancing robot to entertain people!</p>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row" style="width: 720;">
+                <div class="col-sm-3">
+                    <h5></h5>
+                    <ul></ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Home</h5>
+                    <ul>
+                        <li><a href="index.html">Learn more</a></li>
+                        <li><a href="index.html">Features</a></li>
+                        <li><a href="index.html">Meet the Creators</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Features</h5>
+                    <ul>
+                        <li><a href="zoom.html">Zoom</a></li>
+                        <li><a href="assignment.html">Assignment Submission and Marking</a></li>
+                        <li><a href="#">School Supplies</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5></h5>
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2020 Copyright Text</p>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/smoothproducts.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+<script src="assets/js/quiz.js"></script>
+</body>
+
+</html>

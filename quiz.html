@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by  Naseeb Dangi</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+<head>
+<link rel="stylesheet" href="assets/css/quiz.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+<div class='wrapper'>
+  <div class='question'>
+    <div class='question-headline'>
+      1. Which of the following is similar to an animal in computer? <br>
+    </div>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q1a1' name='question-1' type='radio' value='false'><label for="q1a1">Keyboard</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q1a2' name='question-1' type='radio' value='true'><label for="q1a2">Mouse</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q1a3' name='question-1' type='radio' value='false'><label for="q1a3">Microphone</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q1a3' name='question-1' type='radio' value='false'><label for="q1a3">Printer</label></input>
+      </div>
+    </div>
+  </div>
+  <div class='question'>
+    <div class='question-headline'>
+      2. Which is the tallest mountain in the world?
+    </div>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q2a1' name='question-2' type='radio' value='true'><label for="q2a1">Mt.Everest</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q2a2' name='question-2' type='radio' value='false'><label for="q2a2">Lhotse</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q2a3' name='question-2' type='radio' value='false'><label for="q2a3">Makalu</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q2a4' name='question-2' type='radio' value='false'><label for="q2a4">Manaslu</label></input>
+      </div>
+    </div>
+  </div>
+  <div class='question'>
+    <div class='question-headline'>
+      3. What is the value to 100-(50-25)?
+    </div>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q3a1' name='question-3' type='radio' value='false'><label for="q3a1">100</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q3a2' name='question-3' type='radio' value='true'><label for="q3a2">75</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q3a3' name='question-3' type='radio' value='false'><label for="q3a3">100</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q3a4' name='question-3' type='radio' value='false'><label for="q3a4">50</label></input>
+      </div>
+    </div>
+  </div>
+  <div class='question'>
+    <div class='question-headline'>
+      4. What is the fourth planet from the SUN? <br>
+    </div>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q4a1' name='question-4' type='radio' value='false'><label for="q2a1">Jupiter</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q4a2' name='question-4' type='radio' value='false'><label for="q4a2">Saturn</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q4a3' name='question-4' type='radio' value='false'><label for="q4a3">Mercury</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q4a4' name='question-4' type='radio' value='true'><label for="q4a4">Mars</label></input>
+      </div>
+    </div>
+  </div>
+  <div class='question'>
+    <div class='question-headline'>
+      5. When is World Environment Day?
+      <br>
+      <center>
+    </div>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q5a1' name='question-5' type='radio' value='false'><label for="q5a1">June 8</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q5a2' name='question-5' type='radio' value='false'><label for="q5a2">July 8 </label></input>
+      </div>
+      <div class='answer'>
+        <input id='q5a3' name='question-5' type='radio' value='true'><label for="q5a3">June 5</label></input>
+      </div>
+      <div class='answer'>
+        <input id='q5a4' name='question-5' type='radio' value='false'><label for="q5a4">August 7</label></input>
+      </div>
+    </div>
+  </div>
+  <div class='result'></div>
+  <button class='btn-check'>Submit Answers</button>
+</div>
+
+</body>
+<script type="text/coffeescript"> $(document).ready ->
+  quiz.init()
+  
+quiz =
+  init: ->
+    @bind_events()
+    
+  bind_events: ->
+    $(document).on "click", ".btn-check", (e) ->
+      quiz.check()
+      
+  check: ->
+    i = 1
+    correct = 0
+    incorrect = 0
+    $(".question").each ->
+      val = $("input:radio[name='question-"+i+"']:checked").val()
+
+      correct_count = 0
+      correct_checked = 0
+      checked_count = 0
+      $("input:checkbox[name='question-"+i+"']").each ->
+        if $(this).attr("value") == "true"
+          correct_count++
+          if $(this).is(":checked")
+            correct_checked++
+        if $(this).is(":checked")
+          checked_count++
+      if correct_count > 0 && correct_count == correct_checked && checked_count == correct_count
+        val = "true"
+
+      $(this).removeClass("success error");
+      if val == "true"
+        $(this).addClass("success");
+        correct++
+      else
+        $(this).addClass("error");
+        incorrect++
+      i++
+    Estimate = ""
+    if correct == 0
+      Estimate = "0"
+    if correct == 1
+      Estimate = "1"
+    if correct == 2
+      Estimate = "2"
+    if correct == 3
+      Estimate = "3"
+    if correct == 4
+      Estimate = "4"
+    if correct == 5
+      Estimate = "5"
+    if correct == 6
+      Estimate = "540-600"
+    if correct == 7
+      Estimate = "600-660"
+    if correct == 8
+      Estimate = "660-720"
+    if correct == 9
+      Estimate = "720-760"      
+    if correct == 10
+      Estimate = "760+"
+      
+    $(".result").html("Your estimate score range on the SAT Math is: " + Estimate + "!").show();
+ </script>
+
+
+
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
